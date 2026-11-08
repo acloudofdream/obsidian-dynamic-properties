@@ -140,7 +140,7 @@ Copy these files into:
 > **中文**：把以下文件复制到：
 
 ```text
-<vault>/.obsidian/plugins/rained_dynamic-properties/
+<vault>/.obsidian/plugins/acloudofdream_dynamic-properties/
 ├─ manifest.json
 ├─ main.js
 └─ styles.css
