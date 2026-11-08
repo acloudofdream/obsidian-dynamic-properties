@@ -1,0 +1,9 @@
+{
+  "id": "rained_dynamic-properties",
+  "name": "Dynamic Properties",
+  "version": "0.1.0",
+  "minAppVersion": "1.8.0",
+  "description": "Add tag-aware property suggestions to Obsidian's native property editor.",
+  "author": "rained",
+  "isDesktopOnly": false
+}

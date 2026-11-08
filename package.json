@@ -1,0 +1,26 @@
+{
+  "name": "rained-dynamic-properties",
+  "version": "0.1.0",
+  "description": "Tag-aware property suggestions for Obsidian's native property editor.",
+  "license": "MIT",
+  "author": "acloudofdream",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acloudofdream/obsidian-dynamic-properties.git"
+  },
+  "homepage": "https://github.com/acloudofdream/obsidian-dynamic-properties#readme",
+  "bugs": {
+    "url": "https://github.com/acloudofdream/obsidian-dynamic-properties/issues"
+  },
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc --noEmit && node esbuild.config.mjs production"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.25.0",
+    "obsidian": "^1.14.4",
+    "typescript": "^5.7.2"
+  }
+}

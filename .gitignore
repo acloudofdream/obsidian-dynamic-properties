@@ -1,0 +1,15 @@
+node_modules/
+*.log
+.DS_Store
+
+# Obsidian runtime data / local vault config
+data.json
+.obsidian/
+backups/
+
+# Local build and environment artifacts
+*.zip
+.env
+.env.*
+*.pem
+*.key
