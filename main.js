@@ -232,8 +232,14 @@ function installPropertySuggestPatch(host) {
     );
     return null;
   }
-  const originalShowSuggestions = prototype.showSuggestions;
-  const originalSelectSuggestion = prototype.selectSuggestion;
+  const originalShowSuggestions = Reflect.get(
+    prototype,
+    "showSuggestions"
+  );
+  const originalSelectSuggestion = Reflect.get(
+    prototype,
+    "selectSuggestion"
+  );
   const patchedShowSuggestions = function(suggestions) {
     if (isPropertyKeySuggest(this)) {
       try {
@@ -394,7 +400,6 @@ var DynamicPropertiesSettingTab = class extends import_obsidian2.PluginSettingTa
     const { containerEl } = this;
     containerEl.empty();
     containerEl.addClass("dp-settings");
-    new import_obsidian2.Setting(containerEl).setName("Dynamic Properties").setHeading();
     containerEl.createEl("p", {
       cls: "dp-intro",
       text: "\u7ED9\u7B14\u8BB0\u52A0\u4E0A\u6307\u5B9A\u6807\u7B7E\u540E\uFF0C\u5728\u539F\u751F\u201C\u6DFB\u52A0\u5C5E\u6027\u201D\u7684\u5019\u9009\u5217\u8868\u91CC\u8FFD\u52A0\u4F60\u914D\u7F6E\u7684\u5C5E\u6027\u3002\u6CA1\u6709\u547D\u4E2D\u6807\u7B7E\u7684\u7B14\u8BB0\u4E0D\u4F1A\u770B\u5230\u8FD9\u4E9B\u989D\u5916\u5C5E\u6027\u3002"

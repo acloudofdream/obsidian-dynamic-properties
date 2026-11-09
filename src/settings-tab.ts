@@ -31,8 +31,6 @@ export class DynamicPropertiesSettingTab extends PluginSettingTab {
     containerEl.empty();
     containerEl.addClass("dp-settings");
 
-    new Setting(containerEl).setName("Dynamic Properties").setHeading();
-
     containerEl.createEl("p", {
       cls: "dp-intro",
       text: "给笔记加上指定标签后，在原生“添加属性”的候选列表里追加你配置的属性。没有命中标签的笔记不会看到这些额外属性。",

@@ -58,8 +58,16 @@ export function installPropertySuggestPatch(
     return null;
   }
 
-  const originalShowSuggestions = prototype.showSuggestions;
-  const originalSelectSuggestion = prototype.selectSuggestion;
+  // Read through Reflect so the original methods stay callable with a dynamic
+  // `this` without being treated as unbound method references.
+  const originalShowSuggestions = Reflect.get(
+    prototype,
+    "showSuggestions",
+  ) as PropertySuggestPrototype["showSuggestions"];
+  const originalSelectSuggestion = Reflect.get(
+    prototype,
+    "selectSuggestion",
+  ) as PropertySuggestPrototype["selectSuggestion"];
 
   const patchedShowSuggestions = function (
     this: PropertySuggestInstance,
