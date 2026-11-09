@@ -31,7 +31,7 @@ export class DynamicPropertiesSettingTab extends PluginSettingTab {
     containerEl.empty();
     containerEl.addClass("dp-settings");
 
-    containerEl.createEl("h2", { text: "Dynamic Properties" });
+    new Setting(containerEl).setName("Dynamic Properties").setHeading();
 
     containerEl.createEl("p", {
       cls: "dp-intro",
@@ -98,7 +98,8 @@ export class DynamicPropertiesSettingTab extends PluginSettingTab {
     });
 
     const header = card.createDiv("dp-rule-header");
-    const title = header.createEl("h3", {
+    const title = header.createDiv({
+      cls: "dp-rule-title",
       text: rule.tag ? `#${normalizeTag(rule.tag)}` : "未命名规则",
     });
     const removeButton = header.createEl("button", {

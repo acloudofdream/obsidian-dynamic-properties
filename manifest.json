@@ -1,7 +1,7 @@
 {
-  "id": "acloudofdream_dynamic_properties",
+  "id": "acloudofdream-dynamic-properties",
   "name": "Dynamic Properties",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minAppVersion": "1.8.0",
   "description": "Add tag-aware property suggestions to Obsidian's native property editor.",
   "author": "acloudofdream",

@@ -1,6 +1,7 @@
 # Dynamic Properties
 
 Dynamic Properties extends Obsidian's native property-name suggestions based on the tags of the current note. Notes that do not match a configured tag keep the native suggestion list and do not show any extra properties.
+
 This is a small AI-assisted plugin I built to solve my own workflow needs.
 
 > Dynamic Properties 会根据当前笔记的标签，扩展 Obsidian 原生“添加属性”的候选列表；没有命中标签的笔记保持原生列表，不显示这些额外属性。
@@ -125,7 +126,15 @@ obsidian-dynamic-properties/
    └─ types.ts              # settings and type definitions
 ```
 
-## Build and install / 构建与安装
+## Installation / 安装
+
+### Community plugins / 社区插件市场
+
+After the plugin is published, open **Settings → Community plugins → Browse**, search for **Dynamic Properties**, select **Install**, and then **Enable**.
+
+> 插件上架后，打开 **设置 → 第三方插件 → 浏览**，搜索 **Dynamic Properties**，点击“安装”，然后启用。
+
+### Manual installation / 手动安装
 
 ```bash
 npm install
@@ -147,8 +156,7 @@ Then enable **Dynamic Properties** under Obsidian's community plugins.
 
 > 然后在 Obsidian 的“第三方插件”中启用 **Dynamic Properties**。
 
-Development mode:
-> 开发模式：
+### Development mode / 开发模式
 
 ```bash
 npm run dev
@@ -161,6 +169,10 @@ npm run dev
 GitHub repository: [acloudofdream/obsidian-dynamic-properties](https://github.com/acloudofdream/obsidian-dynamic-properties)
 
 > GitHub 仓库：[acloudofdream/obsidian-dynamic-properties](https://github.com/acloudofdream/obsidian-dynamic-properties)
+
+Contributions and bug reports are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the build and test workflow.
+
+> 欢迎提交贡献和问题反馈，构建与测试流程见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## Security and privacy / 安全与隐私
 
